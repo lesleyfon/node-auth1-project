@@ -1,5 +1,5 @@
 const db = require('./../data/dbConfig');
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
 
 function findUsers(){
     return db('users')
@@ -7,6 +7,9 @@ function findUsers(){
 
 function findUserById(id){
     return db('users').where('id', id).first()
+}
+function findUserByUsername(username){
+    return db('users').where('username', username).first();
 }
 async function addUser(user){
    const hash = await bcrypt.hash(user.password, 10);
@@ -19,5 +22,6 @@ async function addUser(user){
 module.exports = {
     findUsers,
     findUserById,
-    addUser
+    addUser,
+    findUserByUsername
 }
