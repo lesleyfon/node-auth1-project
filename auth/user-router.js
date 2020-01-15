@@ -20,7 +20,6 @@ router.post('/register', async (req, res, next) => {
             user: user
         })
     }
-
 })
 
 router.get('/users', async (req, res, next)=>{

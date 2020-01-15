@@ -7,7 +7,7 @@ const userRoute = require('./auth/user-router');
 
 
 app.use(express.json());
-app.use('/auth', userRoute);
+app.use('/api', userRoute);
 
 app.get('/', (req, res) => res.json({
     message: 'Welcome'
