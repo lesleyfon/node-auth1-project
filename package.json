@@ -19,7 +19,7 @@
   "homepage": "https://github.com/lesleyfon/node-auth1-project#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "knex": "^0.20.8",
     "sqlite": "^3.0.3"
   }
